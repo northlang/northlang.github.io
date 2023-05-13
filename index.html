@@ -6,12 +6,63 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="description" content="The official website for the North Programming Language." />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="icon" href="favicon.png">
+    <link rel="icon" href="assets/favicon.png">
 </head>
 <body>
-    <h3>North</h3>
-    
+    <div class="overlay"></div>
 
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html"><img src="assets/favicon.png" alt="Logo" height="25" width="25"> North</a></div>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="docs.html">Documentation</a></li>
+                <li><a href="https://discord.gg/pFDJFCvuVC">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <h3 class="centered">Introducing North, a powerful and expressive programming language designed for general-purpose use. With a syntax that combines elegance and simplicity, North offers a seamless coding experience for developers of all skill levels. Whether you're a seasoned programmer or just starting your journey, North empowers you to bring your ideas to life.</h3>
+        <br>
+
+        <p class="left">North is a compiled language, enabling efficient and high-performance execution of your code. While not specifically tailored for web development, North provides a solid foundation for building a wide range of applications, and it may incorporate web frameworks like Python's Flask in the future, expanding its versatility even further.</p>
+        <br>
+
+        <p class="right">North is a dynamically typed programming language, empowering developers with flexible runtime behavior. With dynamic typing, you can write expressive and concise code without the need for explicit type declarations. Variables in North can hold values of any type, and their types are determined at runtime based on the assigned values. This flexibility allows for rapid prototyping and quick iteration, as you can easily modify and reassign variables without worrying about static type constraints.</p>
+        <br>
+
+        <p class="centered">Whether you're interested in developing desktop applications, algorithms, or diving into data analysis, North equips you with the tools you need to succeed. Join our <a href="https://discord.gg/pFDJFCvuVC">community</a> and embark on a coding adventure with North today!</p>
+        <br>
+
+        <h3>Syntax</h3>
+        <p>North offers a clean and intuitive syntax designed to enhance developer productivity and readability. With its elegant and expressive structure, North's syntax strikes a balance between simplicity and power. Whether you're a seasoned programmer or just starting your coding journey, North's syntax makes it easy to write clean and concise code, enabling you to bring your ideas to life with ease.</p>
+        <p class="centered">Example:</p>
+        <div class="editor-container">
+            <div id="editor"># Use ? to define parameters, seperated with commas
+fn factorial ? n
+    if $n == 0
+        # Use give to return values
+        give 1
+    else
+        # Recursion!
+        give $n * {factorial n - 1}
+    end
+end
+
+begin
+    # & is the concatenation symbol
+    result = {toStr {factorial 4}} # Converting the result of factorial 4 to a string to print it in a message
+    out "The factorial of 4 is " & result & "\n"
+end
+</div>
+        </div>
+        <h6 class="centered">Powered by <a href="https://ace.c9.io/">Ace</a></h6>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.20.0/ace.js"></script>
     <!-- ░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░░ -->
     <!-- ░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░ -->
     <!-- ░░░░█░░░▒▒▒▒▒▒░░░░░░░░▒▒▒░░█░░░ -->
@@ -27,5 +78,6 @@
     <!-- ░░░░░░░▀▄▄░▒▒▒▒░░░░░░░░░░▒░░░█░ -->
     <!-- ░░░░░░░░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░░░░█░ -->
     <!-- ░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░▄█░░ -->
+    <script src="script.js"></script>
 </body>
 </html>
