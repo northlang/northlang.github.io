@@ -42,12 +42,12 @@
         <div class="editor-container">
             <div id="editor"># Use ? to define parameters, seperated with commas
 fn factorial ? n
-    if $n == 0
+    if n == 0
         # Use give to return values
         give 1
     else
         # Recursion!
-        give $n * {factorial n - 1}
+        give n * {factorial n - 1}
     end
 end
 
